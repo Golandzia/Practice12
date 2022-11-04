@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageOfFruit"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="55dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/apple" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageOfFruit">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/AppleRadioButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:onClick="clickAppleRadioButton"
+                android:text="Яблоко"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioButton
+                android:id="@+id/PearRadioButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:onClick="clickPearRadioButton"
+                android:text="Груша"
+                app:layout_constraintBottom_toBottomOf="@+id/AppleRadioButton"
+                app:layout_constraintEnd_toStartOf="@+id/GrapeRadioButton"
+                app:layout_constraintStart_toEndOf="@+id/AppleRadioButton" />
+
+            <RadioButton
+                android:id="@+id/GrapeRadioButton"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:onClick="clickGrapeRadioButton"
+                android:text="Виноград"
+                app:layout_constraintBottom_toBottomOf="@+id/AppleRadioButton"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/AppleCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Яблоко"
+        android:onClick="clickAppleCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <CheckBox
+        android:id="@+id/PearCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Груша"
+        android:onClick="clickPearCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/AppleCheckBox" />
+
+    <CheckBox
+        android:id="@+id/GrapeCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Виноград"
+        android:onClick="clickGrapeCheckBox"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/PearCheckBox" />
+
+    <ImageView
+        android:id="@+id/AppleImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/PearImageView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/PearImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="65dp"
+        app:layout_constraintEnd_toStartOf="@+id/GrapeImageView"
+        app:layout_constraintStart_toEndOf="@+id/AppleImageView"
+        app:layout_constraintTop_toBottomOf="@+id/GrapeCheckBox" />
+
+    <ImageView
+        android:id="@+id/GrapeImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/PearImageView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
